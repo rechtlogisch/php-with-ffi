@@ -16,7 +16,7 @@ RUN apt-get update && \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 ## Set user
-USER www-data
+#USER www-data
 
 ## Set working directory
 WORKDIR $HOME
