@@ -1,8 +1,9 @@
 FROM php:cli
 LABEL maintainer="Recht logisch <https://rechtlogisch.de>"
 
-## Set home directory
+## Set paths
 ENV HOME /var/www
+ENV PATH_BIN /usr/local/bin
 
 ## Install FFI, unzip and delete unneeded files
 RUN apt-get update && \
@@ -13,10 +14,13 @@ RUN apt-get update && \
     rmdir $HOME/html
 
 ## Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=$PATH_BIN --filename=composer
 
-## When set, no output in Pipelines
-#USER www-data
+## Copy scripts
+COPY scripts/outdated-major.sh $PATH_BIN
+
+## Set user
+USER www-data
 
 ## Set working directory
 WORKDIR $HOME
