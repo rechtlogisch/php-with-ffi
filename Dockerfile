@@ -17,10 +17,10 @@ RUN apt-get update && \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=$PATH_BIN --filename=composer
 
 ## Copy scripts
-COPY scripts/outdated-major.sh $PATH_BIN
+COPY scripts/*.sh $PATH_BIN
 
-## Set user
-USER www-data
+## When set, no output in Pipelines
+#USER www-data
 
 ## Set working directory
 WORKDIR $HOME
