@@ -1,5 +1,8 @@
 # PHP with FFI
 
+[![Docker Cloud automated build](https://img.shields.io/docker/cloud/automated/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier)
+[![Docker Cloud build status](https://img.shields.io/docker/cloud/build/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier/builds)
+
 A custom image for Bitbucket Pipelines including Composer and the PHP FFI extension.  
 
 Based on the current stable PHP CLI.
