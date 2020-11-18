@@ -3,7 +3,7 @@
 [![Docker Cloud automated build](https://img.shields.io/docker/cloud/automated/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier)
 [![Docker Cloud build status](https://img.shields.io/docker/cloud/build/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier/builds)
 
-A custom image for Bitbucket Pipelines including Composer and the PHP FFI extension.  
+A custom image for CI Pipelines including Composer and the PHP FFI extension.  
 
 Based on the current stable PHP CLI.
 
@@ -15,26 +15,10 @@ This Dockerfile is automagically built on [Docker Hub](https://hub.docker.com/r/
 
 # Usage
 
-Enable Pipelines in `Repository settings` > `Pipelines` > `Settings`.
+Feel free to use `rechtlogisch/ffier` with any Pipeline of your choice. You'll find usage examples in the [Wiki](../../wiki) for the following service providers:
 
-Add `bitbucket-pipelines.yml` to your repository.
-
-Example:
-```
-image: rechtlogisch/ffier
-
-pipelines:
-  default:
-    - step:
-        name: Test
-        caches:
-          - composer
-        script:
-          - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts 
-          - composer test
-```
-
-To run tests with `composer test` add for example `vendor/bin/pest` to the `scripts` property of your `composer.json` (cf. [Composer documentation](https://getcomposer.org/doc/articles/scripts.md#defining-scripts) and [Pest PHP](https://pestphp.com))
+* [Bitbucket](../../wiki/Bitbucket-Pipeline)
+* [GitLab](../../wiki/GitLab-Pipeline)
 
 ## PHP modules included
 
