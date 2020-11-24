@@ -2,16 +2,17 @@
 
 [![Docker Cloud automated build](https://img.shields.io/docker/cloud/automated/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier)
 [![Docker Cloud build status](https://img.shields.io/docker/cloud/build/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier/builds)
+[![Docker image size and layers](https://images.microbadger.com/badges/image/rechtlogisch/ffier.svg)](https://hub.docker.com/r/rechtlogisch/ffier/tags)
 
 A custom image for CI Pipelines including Composer and the PHP FFI extension.  
 
-Based on the current stable PHP CLI.
+Based on the current stable PHP CLI ([cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
 
 Features:
 - Composer 2
 - PHP FFI extension
 
-This Dockerfile is automagically built on [Docker Hub](https://hub.docker.com/r/rechtlogisch/ffier)
+This Dockerfile is automagically built on [Docker Hub](https://hub.docker.com/r/rechtlogisch/ffier). A separately hosted script checks for a new stable PHP version at ~5am UTC every day and triggers a new build, when necessary.
 
 # Usage
 
