@@ -1,4 +1,4 @@
-name: Publish Docker images
+name: Publish images
 
 on: [workflow_dispatch]
 
@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.0, 7.4]
+        php: ['8.0', '7.4']
 
     name: PHP ${{ matrix.php }}
 

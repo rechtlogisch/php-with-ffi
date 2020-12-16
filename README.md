@@ -1,8 +1,10 @@
 # PHP with FFI
 
 [![Docker Cloud automated build](https://img.shields.io/docker/cloud/automated/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier)
+[![GitHub Workflow actions](https://github.com/rechtlogisch/ffier/workflows/Publish%20images/badge.svg)](https://github.com/rechtlogisch/ffier/actions)
 [![Docker Cloud build status](https://img.shields.io/docker/cloud/build/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier/builds)
-[![Docker image size and layers](https://images.microbadger.com/badges/image/rechtlogisch/ffier.svg)](https://hub.docker.com/r/rechtlogisch/ffier/tags)
+[![Docker image size :latest](https://img.shields.io/docker/image-size/rechtlogisch/ffier/latest)](https://hub.docker.com/r/rechtlogisch/ffier/tags)
+[![Docker image layers :latest](https://img.shields.io/microbadger/layers/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier/tags)
 
 A custom image for CI Pipelines including Composer and the PHP FFI extension.  
 
