@@ -6,13 +6,14 @@
 
 A custom image for CI Pipelines including Composer and the PHP FFI extension.  
 
-Based on the current stable PHP CLI ([cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
+Based on the currently supported stable PHP CLI ([cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
 
 Features:
+- PHP 8 / PHP 7.4 (based on [tags](https://hub.docker.com/repository/docker/rechtlogisch/ffier/tags))
 - Composer 2
 - PHP FFI extension
 
-This Dockerfile is automagically built on [Docker Hub](https://hub.docker.com/r/rechtlogisch/ffier). A separately hosted script checks for a new stable PHP version at ~5am UTC every day and triggers a new build, when necessary.
+This Dockerfile is automagically built on [Docker Hub](https://hub.docker.com/r/rechtlogisch/ffier). Currently, only for the linux/amd64 platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when necessary.
 
 # Usage
 

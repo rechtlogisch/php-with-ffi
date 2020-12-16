@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 MOUNT=$1
 COMMAND=$2
@@ -7,5 +7,5 @@ docker run -it \
   --rm \
   --name ffier \
   -v "$MOUNT":/var/www \
-  ffier:latest \
-  $COMMAND
+  rechtlogisch/ffier:latest \
+  "$COMMAND"
