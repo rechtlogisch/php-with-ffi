@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: ['8.0', '7.4']
+        tag: ['8.1-rc-cli', '8.0-cli', '7.4-cli']
 
     name: PHP ${{ matrix.php }}
 
@@ -31,9 +31,9 @@ jobs:
           pull: true
           push: true
           build-args: |
-            "VERSION_PREFIX=${{ matrix.php }}-"
-          cache-from: type=registry,ref=rechtlogisch/ffier:${{ matrix.php }}
+            "IMAGE_TAG=${{ matrix.php }}"
+          cache-from: type=registry,ref=rechtlogisch/php-with-ffi:${{ matrix.php }}
           cache-to: type=inline
-          tags: rechtlogisch/ffier:${{ matrix.php }}
+          tags: rechtlogisch/php-with-ffi:${{ matrix.php }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

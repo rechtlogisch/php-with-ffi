@@ -11,7 +11,7 @@ COMMAND=$2
 
 docker run -it \
   --rm \
-  --name ffier \
+  --name php-with-ffi \
   -v "$MOUNT":/var/www \
-  rechtlogisch/ffier:"${IMAGE_TAG:-latest}" \
+  rechtlogisch/php-with-ffi:"${IMAGE_TAG:-latest}" \
   $COMMAND
