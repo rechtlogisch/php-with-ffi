@@ -6,14 +6,14 @@
 [![Docker image size :latest](https://img.shields.io/docker/image-size/rechtlogisch/ffier/latest)](https://hub.docker.com/r/rechtlogisch/ffier/tags)
 [![Docker image layers :latest](https://img.shields.io/microbadger/layers/rechtlogisch/ffier)](https://hub.docker.com/r/rechtlogisch/ffier/tags)
 
-A custom image for CI Pipelines including Composer and the PHP FFI extension.  
+A custom image for CI Pipelines including the PHP FFI extension and Composer.
 
-Based on the currently supported stable PHP CLI ([cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
+Based on the currently supported stable PHP (defaults to: [cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
 
 Features:
-- PHP 8 / PHP 7.4 (based on [tags](https://hub.docker.com/repository/docker/rechtlogisch/ffier/tags))
-- Composer 2
+- PHP 8.1 RC / PHP 8 / PHP 7.4 (based on [tags](https://hub.docker.com/repository/docker/rechtlogisch/ffier/tags))
 - PHP FFI extension
+- Composer 2
 
 This Dockerfile is automagically built on [Docker Hub](https://hub.docker.com/r/rechtlogisch/ffier). Currently, only for the linux/amd64 platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when a new official PHP docker image is available.
 

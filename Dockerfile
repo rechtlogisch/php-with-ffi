@@ -1,12 +1,12 @@
-ARG VERSION_PREFIX=""
-FROM amd64/php:${VERSION_PREFIX}cli
+ARG IMAGE_TAG="cli"
+FROM amd64/php:${IMAGE_TAG}
 LABEL maintainer="Recht logisch <https://rechtlogisch.de>"
 
 ## Set paths
 ENV HOME /var/www
 ENV PATH_BIN /usr/local/bin
 
-## Install FFI, unzip and delete unneeded files
+## Install FFI, unzip and delete obsolete files
 RUN apt-get -yqq update && \
     apt-get install -yqq libffi-dev unzip && \
     docker-php-ext-install -j$(nproc) ffi && \
