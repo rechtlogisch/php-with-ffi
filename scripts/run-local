@@ -2,7 +2,7 @@
 
 if [ -z "$1" ] || [ -z "$2" ]; then
     echo "Please provide exactly two arguments"
-    echo "Usage: run-local path \"php -v\""
+    echo "Usage: run-local /path/local \"php -v\""
     exit 1
 fi
 
@@ -13,5 +13,5 @@ docker run -it \
   --rm \
   --name ffier \
   -v "$MOUNT":/var/www \
-  rechtlogisch/ffier:latest \
+  rechtlogisch/ffier:"${IMAGE_TAG:-latest}" \
   $COMMAND
