@@ -10,7 +10,7 @@ jobs:
       matrix:
         tag: ['8.1-rc-cli', '8.0-cli', '7.4-cli']
 
-    name: PHP ${{ matrix.php }}
+    name: PHP ${{ matrix.tag }}
 
     steps:
       - name: Checkout code
@@ -31,9 +31,9 @@ jobs:
           pull: true
           push: true
           build-args: |
-            "IMAGE_TAG=${{ matrix.php }}"
-          cache-from: type=registry,ref=rechtlogisch/php-with-ffi:${{ matrix.php }}
+            "IMAGE_TAG=${{ matrix.tag }}"
+          cache-from: type=registry,ref=rechtlogisch/php-with-ffi:${{ matrix.tag }}
           cache-to: type=inline
-          tags: rechtlogisch/php-with-ffi:${{ matrix.php }}
+          tags: rechtlogisch/php-with-ffi:${{ matrix.tag }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
