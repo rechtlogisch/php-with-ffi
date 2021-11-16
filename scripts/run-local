@@ -12,6 +12,6 @@ COMMAND=$2
 docker run -it \
   --rm \
   --name php-with-ffi \
-  -v "$MOUNT":/var/www \
+  -v "$MOUNT":/var/www:delegated \
   rechtlogisch/php-with-ffi:"${IMAGE_TAG:-latest}" \
   $COMMAND
