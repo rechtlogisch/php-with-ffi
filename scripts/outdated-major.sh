@@ -16,7 +16,7 @@ if [ ! -f composer.json ]; then
     exit 1
 fi
 
-COMMAND="composer outdated --direct"
+COMMAND="composer outdated --direct $*" # allow passing additional options
 LIST_DIRECT="$($COMMAND)"
 COUNT_DIRECT=$(echo "$LIST_DIRECT" | sed '/^\s*$/d' | wc -l)
 
