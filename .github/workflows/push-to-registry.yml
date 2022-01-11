@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        tag: ['8.1-cli', '8.0-cli', '7.4-cli']
+        tag: ['latest', '8.1-cli', '8.0-cli', '7.4-cli']
 
     name: PHP ${{ matrix.tag }}
 
