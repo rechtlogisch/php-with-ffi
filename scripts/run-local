@@ -14,5 +14,5 @@ docker run -it \
   --name php-with-ffi \
   -v "$MOUNT":/var/www:delegated \
   --platform "linux/amd64" \
-  rechtlogisch/php-with-ffi:"${IMAGE_TAG:-latest}" \
+  ghcr.io/rechtlogisch/php-with-ffi:"${IMAGE_TAG:-latest}" \
   $COMMAND
