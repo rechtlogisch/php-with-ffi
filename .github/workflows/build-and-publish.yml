@@ -1,0 +1,60 @@
+name: Build and publish Docker images
+
+on: [workflow_dispatch]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        tag: [ 'latest', '8.2-cli', '8.1-cli', '8.0-cli' ]
+    permissions:
+      contents: read
+      packages: write
+
+    name: PHP ${{ matrix.tag }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v2.1.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@4.3.0
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and push Docker image
+        id: docker_build
+        uses: docker/build-push-action@v4.0.0
+        with:
+          context: .
+          pull: true
+          push: true
+          build-args: |
+            "IMAGE_TAG=${{ matrix.tag }}"
+          cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
+          cache-to: type=inline
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
+
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+
+      - name: Meta tags
+        run: echo ${{ steps.meta.outputs.tags }}
+
+      - name: Meta labels
+        run: echo ${{ steps.meta.outputs.labels }}
+
