@@ -1,10 +1,12 @@
 # PHP with FFI
 
 [![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/workflows/Build%20and%20publish%20Docker%20images/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
+[![Tags](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/tags)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
+[![Size](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/size?tag=latest)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi/79215656?tag=latest)
 
 A custom image for CI Pipelines including the PHP FFI extension and Composer.
 
-Based on the currently supported PHP version (base image defaults to: [cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
+Based on the currently supported PHP versions (base image defaults to: [cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
 
 Features:
 - PHP 8.2 / PHP 8.1 / PHP 8.0 (based on [tags](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi))
