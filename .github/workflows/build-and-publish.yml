@@ -48,13 +48,9 @@ jobs:
           cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
           cache-to: type=inline
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
+          labels: ${{ steps.meta.outputs.labels }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
-      - name: Meta tags
-        run: echo ${{ steps.meta.outputs.tags }}
-
-      - name: Meta labels
-        run: echo ${{ steps.meta.outputs.labels }}
 
