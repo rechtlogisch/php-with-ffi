@@ -13,6 +13,8 @@ Features:
 
 This Dockerfile is automagically built with a [GitHub Workflow](.github/workflows/build-and-publish.yml). Currently, only for the linux/amd64 platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when a new official PHP docker image is available.
 
+⚠️ As of April 13th, 2023 Docker [sunset Docker Free Team Tier](https://www.docker.com/blog/we-apologize-we-did-a-terrible-job-announcing-the-end-of-docker-free-teams/). Therefore, the images have been moved to ghcr.io (GitHub Container Registry) and no new image builds will be published on Docker Hub.
+
 # Usage
 
 Feel free to use `ghcr.io/rechtlogisch/php-with-ffi` with any Pipeline of your choice. You'll find usage examples in the [Wiki](../../wiki) for the following service providers:
