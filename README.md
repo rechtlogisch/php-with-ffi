@@ -1,6 +1,6 @@
 # PHP with FFI
 
-[![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/workflows/Build%20and%20publish%20Docker%20images%20images/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
+[![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/workflows/Build%20and%20publish%20Docker%20images/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
 
 A custom image for CI Pipelines including the PHP FFI extension and Composer.
 
