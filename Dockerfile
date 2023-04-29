@@ -14,11 +14,14 @@ RUN apt-get -yqq update && \
     rm -r /var/lib/apt/lists/* && rm -rf /tmp/pear && \
     rmdir $HOME/html
 
+## Copy config
+COPY config/*.ini /usr/local/etc/php/conf.d/
+
 ## Copy scripts
 COPY scripts/*.sh $PATH_BIN/
 
 ## Install Composer
-RUN composer-install.sh
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 ## When set, no output in Pipelines
 #USER www-data
