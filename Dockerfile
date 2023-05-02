@@ -18,7 +18,7 @@ RUN apt-get -yqq update && \
 COPY config/*.ini /usr/local/etc/php/conf.d/
 
 ## Copy scripts
-COPY scripts/*.sh $PATH_BIN/
+COPY scripts/*.php $PATH_BIN/
 
 ## Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
