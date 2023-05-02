@@ -47,9 +47,9 @@ if ($outdated > 0) {
     $textDependency = ($outdated === 1)
         ? 'dependency'
         : 'dependencies';
-    echo "Outdated major {$textDependency} detected: {$outdated}" . PHP_EOL;
+    echo "Outdated major {$textDependency} found: {$outdated}" . PHP_EOL;
 }
 
 // Reaching this point means no relevant outdated dependencies
-echo 'No outdated major dependencies found' . PHP_EOL;
+echo 'No outdated direct major dependencies found' . PHP_EOL;
 exit(0);
