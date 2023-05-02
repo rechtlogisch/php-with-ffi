@@ -2,7 +2,7 @@
 
 [![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/workflows/Build%20and%20publish%20Docker%20images/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
 [![Tags](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/tags)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
-[![Size](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/size?tag=latest)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi/79215656?tag=latest)
+[![Size](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/size?tag=latest)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
 
 A custom image for CI Pipelines including the PHP FFI extension and Composer.
 
@@ -13,32 +13,32 @@ Features:
 - [PHP FFI](https://www.php.net/manual/en/book.ffi.php) extension
 - [Composer 2](https://getcomposer.org/)
 
-This Dockerfile is automagically built with a [GitHub Workflow](.github/workflows/build-and-publish.yml). Currently, only for the linux/amd64 platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when a new official PHP docker image is available.
+This Dockerfile is automagically built with a [GitHub Workflow](https://github.com/rechtlogisch/php-with-ffi/actions/workflows/build-and-publish.yml). Currently, only for the `linux/amd64 platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when a new official PHP docker image is available.
 
 # Usage
 
-Feel free to use `ghcr.io/rechtlogisch/php-with-ffi` or `rechtlogisch/php-with-ffi` with any Pipeline of your choice. You'll find usage examples in the [Wiki](../../wiki) for the following service providers:
+Feel free to use `ghcr.io/rechtlogisch/php-with-ffi` or `rechtlogisch/php-with-ffi` with any Pipeline of your choice. You'll find usage examples in the [Wiki](https://github.com/rechtlogisch/php-with-ffi/wiki) for the following service providers:
 
-* [Bitbucket](../../wiki/Bitbucket-Pipeline)
-* [GitLab](../../wiki/GitLab-Pipeline)
+* [Bitbucket](https://github.com/rechtlogisch/php-with-ffi/wiki/Bitbucket-Pipeline)
+* [GitLab](https://github.com/rechtlogisch/php-with-ffi/wiki/GitLab-Pipeline)
 
 ## PHP modules included
 
-* [List of PHP modules](../../wiki/List-of-PHP-modules)
+* [List of PHP modules](https://github.com/rechtlogisch/php-with-ffi/wiki/List-of-PHP-modules)
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/rechtlogisch/php-with-ffi/blob/main/.github/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+Please review [our security policy](https://github.com/rechtlogisch/php-with-ffi/security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
 - [Krzysztof Tomasz Zembrowski](https://github.com/zembrowski)
-- [All Contributors](../../contributors)
+- [All Contributors](https://github.com/rechtlogisch/php-with-ffi/graphs/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/rechtlogisch/php-with-ffi/blob/main/LICENSE) for more information.
