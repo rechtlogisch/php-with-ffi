@@ -51,8 +51,8 @@ jobs:
           push: true
           build-args: |
             "IMAGE_TAG=${{ matrix.tag }}"
-          cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
-          cache-to: type=inline
+          cache-from: type=gha
+          cache-to: type=gha,mode=min
           tags: |
             ${{ env.IMAGE_NAME }}:${{ matrix.tag }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tag }}
