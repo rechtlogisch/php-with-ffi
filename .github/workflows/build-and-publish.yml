@@ -52,6 +52,7 @@ jobs:
           context: .
           pull: true
           push: true
+          provenance: false
           build-args: |
             "IMAGE_TAG=${{ matrix.tag }}"
           cache-from: type=gha
