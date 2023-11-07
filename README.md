@@ -1,7 +1,7 @@
 # PHP with FFI
 
-[![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/workflows/Build%20and%20publish%20Docker%20images/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
-[![Tags](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/tags)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
+[![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
+[![Tags](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/tags?n=4)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
 [![Size](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/size?tag=latest)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
 
 A custom image for CI Pipelines including the PHP FFI extension and Composer.
@@ -11,7 +11,7 @@ Based on the currently supported PHP versions (base image defaults to: [cli](htt
 Features:
 - PHP 8.3-RC / PHP 8.2 / PHP 8.1 / PHP 8.0 (based on [tags](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi))
 - [PHP FFI](https://www.php.net/manual/en/book.ffi.php) extension
-- [Composer 2](https://getcomposer.org/)
+- [Composer 2](https://getcomposer.org)
 
 This Dockerfile is automagically built with a [GitHub Workflow](https://github.com/rechtlogisch/php-with-ffi/actions/workflows/build-and-publish.yml). Currently, only for the `linux/amd64` platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when a new official PHP docker image is available.
 
