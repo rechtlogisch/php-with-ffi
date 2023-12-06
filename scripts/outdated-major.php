@@ -16,9 +16,14 @@ if (! file_exists('composer.json')) {
     exit(10);
 }
 
-$output = shell_exec('composer outdated --direct --major-only --format=json');
+// allow ignoring packages passed in as arguments
+$arguments = array_slice($argv, 1);
+$options = array_map(static fn ($item) => '--ignore=' . $item, $arguments);
+$ignore = ' ' . implode(' ', $options);
+
+$output = shell_exec('composer outdated --direct --major-only --format=json' . $ignore);
 if (empty($output)) {
-    echo 'Output of `composer outdated` is empty. Something went wrong while running the command.'. PHP_EOL;
+    echo 'Output of `composer outdated` is empty. Something went wrong while running the command.' . PHP_EOL;
     exit(11);
 }
 
