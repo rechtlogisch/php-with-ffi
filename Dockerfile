@@ -3,8 +3,8 @@ FROM amd64/php:${IMAGE_TAG}
 LABEL maintainer="Recht logisch <https://rechtlogisch.de>"
 
 ## Set paths
-ENV HOME /var/www
-ENV PATH_BIN /usr/local/bin
+ENV HOME=/var/www
+ENV PATH_BIN=/usr/local/bin
 
 ## Install FFI, unzip and delete obsolete files
 RUN apt-get -yqq update && \
