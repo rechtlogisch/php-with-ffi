@@ -1,8 +1,8 @@
 # PHP with FFI
 
 [![GitHub Workflow actions](https://github.com/rechtlogisch/php-with-ffi/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/rechtlogisch/php-with-ffi/actions)
-[![Tags](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/tags?n=4)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
-[![Size](https://ghcr-badge.deta.dev/rechtlogisch/php-with-ffi/size?tag=latest)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
+[![Tags](https://ghcr-badge.egpl.dev/rechtlogisch/php-with-ffi/tags?n=4)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
+[![Size](https://ghcr-badge.egpl.dev/rechtlogisch/php-with-ffi/size?tag=latest)](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi)
 
 A custom image for CI Pipelines including the PHP FFI extension and Composer.
 
