@@ -9,7 +9,7 @@ A custom image for CI Pipelines including the PHP FFI extension and Composer.
 Based on the currently supported PHP versions (base image defaults to: [cli](https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links)).
 
 Features:
-- PHP 8.4 / PHP 8.3 / PHP 8.2 / PHP 8.1 (based on [tags](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi))
+- PHP 8.5-rc / PHP 8.4 / PHP 8.3 / PHP 8.2 / PHP 8.1 (based on [tags](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi))
 - [PHP FFI](https://www.php.net/manual/en/book.ffi.php) extension
 - [Composer 2](https://getcomposer.org)
 
