@@ -12,6 +12,9 @@ Features:
 - PHP 8.6-rc / PHP 8.5 / PHP 8.4 / PHP 8.3 / PHP 8.2 (based on [tags](https://github.com/rechtlogisch/php-with-ffi/pkgs/container/php-with-ffi))
 - [PHP FFI](https://www.php.net/manual/en/book.ffi.php) extension
 - [Composer 2](https://getcomposer.org)
+- `curl`, `make`, `unzip` and `xz`
+
+This is a pre-built image to be used directly in pipelines, not a base for other images. To keep it small, it contains only what is needed to run PHP. The compiler toolchain, PHP sources and headers, `docker-php-ext-*`, `pecl`, `pear`, `phpize`, `php-cgi` and `phpdbg` of the official image are not included, so additional PHP extensions cannot be installed on top of it. If you need them, build on the [official PHP image](https://hub.docker.com/_/php) instead.
 
 This Dockerfile is automagically built with a [GitHub Workflow](https://github.com/rechtlogisch/php-with-ffi/actions/workflows/build-and-publish.yml). Currently, only for the `linux/amd64` platform. A separately hosted script checks for the newest stable PHP versions at ~5am UTC every day and triggers builds, when a new official PHP docker image is available.
 
